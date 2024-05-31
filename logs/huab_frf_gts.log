@@ -1,0 +1,1017 @@
+x shape: (6025, 12, 30, 1) , y shape: (6025, 12, 30, 1)
+train x: (4218, 12, 30, 1) y: (4218, 12, 30, 1)
+val x: (602, 12, 30, 1) y: (602, 12, 30, 1)
+test x: (1205, 12, 30, 1) y: (1205, 12, 30, 1)
+{'base_dir': 'data/model', 'log_level': 'INFO', 'data': {'batch_size': 64, 'dataset_dir': 'HUAB', 'test_batch_size': 64, 'val_batch_size': 64}, 'model': {'cl_decay_steps': 2000, 'filter_type': 'dual_random_walk', 'horizon': 12, 'input_dim': 1, 'l1_decay': 0, 'max_diffusion_step': 3, 'num_nodes': 30, 'num_rnn_layers': 1, 'output_dim': 1, 'rnn_units': 64, 'seq_len': 12, 'use_curriculum_learning': True, 'dim_fc': 67456, 'proj_times': 10, 'step_len': 1.0, 'reg_lambda': 0.01, 'real_constraint': False}, 'train': {'base_lr': 0.001, 'dropout': 0, 'epoch': 0, 'epochs': 200, 'epsilon': 0.001, 'global_step': 0, 'lr_decay_ratio': 0.1, 'max_grad_norm': 5, 'max_to_keep': 100, 'min_learning_rate': 2e-06, 'optimizer': 'adam', 'patience': 100, 'steps': [20, 30, 40], 'test_every_n_epochs': 5, 'knn_k': 5, 'epoch_use_regularization': 200, 'num_sample': 10}}
+2022-11-18 22:04:41,810 - INFO - Log directory: data/model/GTS_DR_3_h_12_64_lr_0.001_bs_64_1118220441/
+param_encoder mean= tensor(-0.0009, grad_fn=<MeanBackward0>) tensor(0.0462, grad_fn=<StdBackward0>)
+param_decoder mean= tensor(-0.0027, grad_fn=<MeanBackward0>) tensor(0.0454, grad_fn=<StdBackward0>)
+param_weight mean= tensor(-0.0067, grad_fn=<MeanBackward0>) tensor(0.1145, grad_fn=<StdBackward0>)
+2022-11-18 22:04:51,442 - INFO - Model created
+2022-11-18 22:04:51,443 - INFO - Start training ...
+2022-11-18 22:04:51,443 - INFO - num_batches:66
+Num of epoch: 0
+2022-11-18 22:04:51,739 - INFO - Total trainable parameters 6867923
+2022-11-18 22:04:58,040 - INFO - epoch complete
+2022-11-18 22:04:58,041 - INFO - evaluating now!
+2022-11-18 22:04:59,147 - INFO - Epoch [0/200] (66) train_mae: 8.5891, val_mae: 3.0823
+Num of epoch: 1
+2022-11-18 22:05:05,650 - INFO - epoch complete
+2022-11-18 22:05:05,651 - INFO - evaluating now!
+2022-11-18 22:05:06,736 - INFO - Epoch [1/200] (132) train_mae: 2.4201, val_mae: 2.8562
+Num of epoch: 2
+2022-11-18 22:05:13,150 - INFO - epoch complete
+2022-11-18 22:05:13,150 - INFO - evaluating now!
+2022-11-18 22:05:14,194 - INFO - Epoch [2/200] (198) train_mae: 1.7255, val_mae: 2.2884
+Num of epoch: 3
+2022-11-18 22:05:20,590 - INFO - epoch complete
+2022-11-18 22:05:20,590 - INFO - evaluating now!
+2022-11-18 22:05:21,666 - INFO - Epoch [3/200] (264) train_mae: 1.3856, val_mae: 2.4601
+Num of epoch: 4
+2022-11-18 22:05:28,107 - INFO - epoch complete
+2022-11-18 22:05:28,107 - INFO - evaluating now!
+2022-11-18 22:05:29,148 - INFO - Epoch [4/200] (330) train_mae: 1.2003, val_mae: 2.2700
+2022-11-18 22:05:31,358 - INFO - Test: mae: 2.2263, mape: 0.3106, rmse: 3.5634
+2022-11-18 22:05:31,358 - INFO - Horizon 15mins: mae: 0.5976, mape: 0.1797, rmse: 1.2130
+2022-11-18 22:05:31,358 - INFO - Horizon 30mins: mae: 1.1291, mape: 0.2306, rmse: 2.6511
+2022-11-18 22:05:31,358 - INFO - Horizon 60mins: mae: 2.7819, mape: 0.5738, rmse: 6.1257
+2022-11-18 22:05:31,362 - INFO - Epoch [4/200] (330) train_mae: 1.2003, test_mae: 2.2263, lr: 0.001000, 6.4s, 7.5s
+Num of epoch: 5
+2022-11-18 22:05:37,653 - INFO - epoch complete
+2022-11-18 22:05:37,653 - INFO - evaluating now!
+2022-11-18 22:05:38,696 - INFO - Epoch [5/200] (396) train_mae: 1.1084, val_mae: 1.9671
+Num of epoch: 6
+2022-11-18 22:05:45,153 - INFO - epoch complete
+2022-11-18 22:05:45,154 - INFO - evaluating now!
+2022-11-18 22:05:46,237 - INFO - Epoch [6/200] (462) train_mae: 0.9995, val_mae: 2.2899
+Num of epoch: 7
+2022-11-18 22:05:53,810 - INFO - epoch complete
+2022-11-18 22:05:53,810 - INFO - evaluating now!
+2022-11-18 22:05:55,077 - INFO - Epoch [7/200] (528) train_mae: 1.0403, val_mae: 2.1123
+Num of epoch: 8
+2022-11-18 22:06:01,536 - INFO - epoch complete
+2022-11-18 22:06:01,536 - INFO - evaluating now!
+2022-11-18 22:06:02,575 - INFO - Epoch [8/200] (594) train_mae: 0.9818, val_mae: 2.2514
+Num of epoch: 9
+2022-11-18 22:06:08,965 - INFO - epoch complete
+2022-11-18 22:06:08,966 - INFO - evaluating now!
+2022-11-18 22:06:10,010 - INFO - Epoch [9/200] (660) train_mae: 0.9335, val_mae: 2.3488
+2022-11-18 22:06:11,973 - INFO - Test: mae: 2.3392, mape: 0.3735, rmse: 3.0315
+2022-11-18 22:06:11,973 - INFO - Horizon 15mins: mae: 0.9929, mape: 0.2613, rmse: 1.7707
+2022-11-18 22:06:11,973 - INFO - Horizon 30mins: mae: 1.4696, mape: 0.3562, rmse: 2.6217
+2022-11-18 22:06:11,973 - INFO - Horizon 60mins: mae: 2.4318, mape: 0.5637, rmse: 4.6302
+2022-11-18 22:06:11,975 - INFO - Epoch [9/200] (660) train_mae: 0.9335, test_mae: 2.3392, lr: 0.001000, 6.4s, 7.4s
+Num of epoch: 10
+2022-11-18 22:06:18,390 - INFO - epoch complete
+2022-11-18 22:06:18,390 - INFO - evaluating now!
+2022-11-18 22:06:19,411 - INFO - Epoch [10/200] (726) train_mae: 0.8036, val_mae: 1.8777
+Num of epoch: 11
+2022-11-18 22:06:25,528 - INFO - epoch complete
+2022-11-18 22:06:25,528 - INFO - evaluating now!
+2022-11-18 22:06:26,525 - INFO - Epoch [11/200] (792) train_mae: 0.7913, val_mae: 2.4075
+Num of epoch: 12
+2022-11-18 22:06:32,644 - INFO - epoch complete
+2022-11-18 22:06:32,644 - INFO - evaluating now!
+2022-11-18 22:06:33,665 - INFO - Epoch [12/200] (858) train_mae: 0.7652, val_mae: 2.2638
+Num of epoch: 13
+2022-11-18 22:06:39,886 - INFO - epoch complete
+2022-11-18 22:06:39,886 - INFO - evaluating now!
+2022-11-18 22:06:40,906 - INFO - Epoch [13/200] (924) train_mae: 0.7030, val_mae: 2.3684
+Num of epoch: 14
+2022-11-18 22:06:47,131 - INFO - epoch complete
+2022-11-18 22:06:47,131 - INFO - evaluating now!
+2022-11-18 22:06:48,194 - INFO - Epoch [14/200] (990) train_mae: 0.6559, val_mae: 1.9118
+2022-11-18 22:06:50,164 - INFO - Test: mae: 1.9429, mape: 0.4482, rmse: 2.6764
+2022-11-18 22:06:50,164 - INFO - Horizon 15mins: mae: 0.5521, mape: 0.2312, rmse: 0.9654
+2022-11-18 22:06:50,164 - INFO - Horizon 30mins: mae: 1.0455, mape: 0.4032, rmse: 1.9702
+2022-11-18 22:06:50,164 - INFO - Horizon 60mins: mae: 2.2643, mape: 0.8075, rmse: 4.6449
+2022-11-18 22:06:50,167 - INFO - Epoch [14/200] (990) train_mae: 0.6559, test_mae: 1.9429, lr: 0.001000, 6.2s, 7.3s
+Num of epoch: 15
+2022-11-18 22:06:56,334 - INFO - epoch complete
+2022-11-18 22:06:56,335 - INFO - evaluating now!
+2022-11-18 22:06:57,344 - INFO - Epoch [15/200] (1056) train_mae: 0.6355, val_mae: 1.8971
+Num of epoch: 16
+2022-11-18 22:07:03,613 - INFO - epoch complete
+2022-11-18 22:07:03,614 - INFO - evaluating now!
+2022-11-18 22:07:04,618 - INFO - Epoch [16/200] (1122) train_mae: 0.6819, val_mae: 1.9069
+Num of epoch: 17
+2022-11-18 22:07:10,956 - INFO - epoch complete
+2022-11-18 22:07:10,956 - INFO - evaluating now!
+2022-11-18 22:07:11,962 - INFO - Epoch [17/200] (1188) train_mae: 0.6375, val_mae: 1.7760
+Num of epoch: 18
+2022-11-18 22:07:18,203 - INFO - epoch complete
+2022-11-18 22:07:18,203 - INFO - evaluating now!
+2022-11-18 22:07:19,235 - INFO - Epoch [18/200] (1254) train_mae: 0.6332, val_mae: 1.6756
+Num of epoch: 19
+2022-11-18 22:07:25,663 - INFO - epoch complete
+2022-11-18 22:07:25,664 - INFO - evaluating now!
+2022-11-18 22:07:26,697 - INFO - Epoch [19/200] (1320) train_mae: 0.6517, val_mae: 2.5821
+2022-11-18 22:07:28,619 - INFO - Test: mae: 2.5290, mape: 0.6260, rmse: 3.7362
+2022-11-18 22:07:28,619 - INFO - Horizon 15mins: mae: 0.7107, mape: 0.2903, rmse: 1.0782
+2022-11-18 22:07:28,619 - INFO - Horizon 30mins: mae: 1.5235, mape: 0.5574, rmse: 2.6040
+2022-11-18 22:07:28,619 - INFO - Horizon 60mins: mae: 3.5240, mape: 1.1727, rmse: 6.7411
+2022-11-18 22:07:28,622 - INFO - Epoch [19/200] (1320) train_mae: 0.6517, test_mae: 2.5290, lr: 0.000010, 6.4s, 7.5s
+Num of epoch: 20
+2022-11-18 22:07:34,996 - INFO - epoch complete
+2022-11-18 22:07:34,996 - INFO - evaluating now!
+2022-11-18 22:07:36,113 - INFO - Epoch [20/200] (1386) train_mae: 0.6136, val_mae: 1.9237
+Num of epoch: 21
+2022-11-18 22:07:42,308 - INFO - epoch complete
+2022-11-18 22:07:42,308 - INFO - evaluating now!
+2022-11-18 22:07:43,336 - INFO - Epoch [21/200] (1452) train_mae: 0.5660, val_mae: 1.9726
+Num of epoch: 22
+2022-11-18 22:07:49,467 - INFO - epoch complete
+2022-11-18 22:07:49,468 - INFO - evaluating now!
+2022-11-18 22:07:50,469 - INFO - Epoch [22/200] (1518) train_mae: 0.5199, val_mae: 1.9260
+Num of epoch: 23
+2022-11-18 22:07:56,738 - INFO - epoch complete
+2022-11-18 22:07:56,738 - INFO - evaluating now!
+2022-11-18 22:07:57,808 - INFO - Epoch [23/200] (1584) train_mae: 0.5163, val_mae: 2.0436
+Num of epoch: 24
+2022-11-18 22:08:04,197 - INFO - epoch complete
+2022-11-18 22:08:04,197 - INFO - evaluating now!
+2022-11-18 22:08:05,211 - INFO - Epoch [24/200] (1650) train_mae: 0.5956, val_mae: 2.0571
+2022-11-18 22:08:07,124 - INFO - Test: mae: 2.0248, mape: 0.3248, rmse: 3.7907
+2022-11-18 22:08:07,124 - INFO - Horizon 15mins: mae: 0.4619, mape: 0.1183, rmse: 0.9853
+2022-11-18 22:08:07,124 - INFO - Horizon 30mins: mae: 1.0360, mape: 0.2584, rmse: 2.3869
+2022-11-18 22:08:07,125 - INFO - Horizon 60mins: mae: 2.9037, mape: 0.7086, rmse: 7.1863
+2022-11-18 22:08:07,127 - INFO - Epoch [24/200] (1650) train_mae: 0.5956, test_mae: 2.0248, lr: 0.000100, 6.4s, 7.4s
+Num of epoch: 25
+2022-11-18 22:08:13,485 - INFO - epoch complete
+2022-11-18 22:08:13,486 - INFO - evaluating now!
+2022-11-18 22:08:14,531 - INFO - Epoch [25/200] (1716) train_mae: 0.5314, val_mae: 1.8543
+Num of epoch: 26
+2022-11-18 22:08:21,360 - INFO - epoch complete
+2022-11-18 22:08:21,360 - INFO - evaluating now!
+2022-11-18 22:08:22,389 - INFO - Epoch [26/200] (1782) train_mae: 0.5685, val_mae: 2.0252
+Num of epoch: 27
+2022-11-18 22:08:28,877 - INFO - epoch complete
+2022-11-18 22:08:28,877 - INFO - evaluating now!
+2022-11-18 22:08:29,880 - INFO - Epoch [27/200] (1848) train_mae: 0.5059, val_mae: 1.8559
+Num of epoch: 28
+2022-11-18 22:08:36,070 - INFO - epoch complete
+2022-11-18 22:08:36,070 - INFO - evaluating now!
+2022-11-18 22:08:37,089 - INFO - Epoch [28/200] (1914) train_mae: 0.5687, val_mae: 2.4354
+Num of epoch: 29
+2022-11-18 22:08:43,349 - INFO - epoch complete
+2022-11-18 22:08:43,349 - INFO - evaluating now!
+2022-11-18 22:08:44,391 - INFO - Epoch [29/200] (1980) train_mae: 0.4877, val_mae: 1.9886
+2022-11-18 22:08:46,607 - INFO - Test: mae: 1.9858, mape: 0.2482, rmse: 3.5389
+2022-11-18 22:08:46,607 - INFO - Horizon 15mins: mae: 0.5267, mape: 0.1659, rmse: 0.9568
+2022-11-18 22:08:46,608 - INFO - Horizon 30mins: mae: 1.0216, mape: 0.2096, rmse: 2.3937
+2022-11-18 22:08:46,608 - INFO - Horizon 60mins: mae: 2.4524, mape: 0.4359, rmse: 6.4351
+2022-11-18 22:08:46,610 - INFO - Epoch [29/200] (1980) train_mae: 0.4877, test_mae: 1.9858, lr: 0.000001, 6.3s, 7.3s
+Num of epoch: 30
+2022-11-18 22:08:52,863 - INFO - epoch complete
+2022-11-18 22:08:52,863 - INFO - evaluating now!
+2022-11-18 22:08:53,895 - INFO - Epoch [30/200] (2046) train_mae: 0.5079, val_mae: 2.7703
+Num of epoch: 31
+2022-11-18 22:09:00,800 - INFO - epoch complete
+2022-11-18 22:09:00,801 - INFO - evaluating now!
+2022-11-18 22:09:01,831 - INFO - Epoch [31/200] (2112) train_mae: 0.4704, val_mae: 1.5930
+Num of epoch: 32
+2022-11-18 22:09:08,017 - INFO - epoch complete
+2022-11-18 22:09:08,018 - INFO - evaluating now!
+2022-11-18 22:09:09,030 - INFO - Epoch [32/200] (2178) train_mae: 0.4340, val_mae: 2.1562
+Num of epoch: 33
+2022-11-18 22:09:15,437 - INFO - epoch complete
+2022-11-18 22:09:15,438 - INFO - evaluating now!
+2022-11-18 22:09:16,446 - INFO - Epoch [33/200] (2244) train_mae: 0.4264, val_mae: 2.4571
+Num of epoch: 34
+2022-11-18 22:09:23,113 - INFO - epoch complete
+2022-11-18 22:09:23,113 - INFO - evaluating now!
+2022-11-18 22:09:24,181 - INFO - Epoch [34/200] (2310) train_mae: 0.4715, val_mae: 2.2208
+2022-11-18 22:09:26,152 - INFO - Test: mae: 2.1979, mape: 0.4776, rmse: 2.9214
+2022-11-18 22:09:26,152 - INFO - Horizon 15mins: mae: 0.4815, mape: 0.1772, rmse: 0.8206
+2022-11-18 22:09:26,152 - INFO - Horizon 30mins: mae: 1.2136, mape: 0.4365, rmse: 2.0719
+2022-11-18 22:09:26,152 - INFO - Horizon 60mins: mae: 3.0103, mape: 0.9321, rmse: 5.1888
+2022-11-18 22:09:26,155 - INFO - Epoch [34/200] (2310) train_mae: 0.4715, test_mae: 2.1979, lr: 0.000010, 6.7s, 7.7s
+Num of epoch: 35
+2022-11-18 22:09:32,321 - INFO - epoch complete
+2022-11-18 22:09:32,322 - INFO - evaluating now!
+2022-11-18 22:09:33,329 - INFO - Epoch [35/200] (2376) train_mae: 0.4579, val_mae: 1.8412
+Num of epoch: 36
+2022-11-18 22:09:39,483 - INFO - epoch complete
+2022-11-18 22:09:39,483 - INFO - evaluating now!
+2022-11-18 22:09:40,498 - INFO - Epoch [36/200] (2442) train_mae: 0.4163, val_mae: 1.9888
+Num of epoch: 37
+2022-11-18 22:09:46,611 - INFO - epoch complete
+2022-11-18 22:09:46,611 - INFO - evaluating now!
+2022-11-18 22:09:47,634 - INFO - Epoch [37/200] (2508) train_mae: 0.4206, val_mae: 2.0042
+Num of epoch: 38
+2022-11-18 22:09:53,806 - INFO - epoch complete
+2022-11-18 22:09:53,806 - INFO - evaluating now!
+2022-11-18 22:09:54,815 - INFO - Epoch [38/200] (2574) train_mae: 0.4119, val_mae: 2.4180
+Num of epoch: 39
+2022-11-18 22:10:00,902 - INFO - epoch complete
+2022-11-18 22:10:00,902 - INFO - evaluating now!
+2022-11-18 22:10:01,967 - INFO - Epoch [39/200] (2640) train_mae: 0.4298, val_mae: 2.2611
+2022-11-18 22:10:03,877 - INFO - Test: mae: 2.2695, mape: 0.7322, rmse: 3.2381
+2022-11-18 22:10:03,877 - INFO - Horizon 15mins: mae: 0.4211, mape: 0.1698, rmse: 0.7343
+2022-11-18 22:10:03,877 - INFO - Horizon 30mins: mae: 1.1350, mape: 0.5260, rmse: 1.9532
+2022-11-18 22:10:03,877 - INFO - Horizon 60mins: mae: 3.5964, mape: 1.7766, rmse: 6.1642
+2022-11-18 22:10:03,879 - INFO - Epoch [39/200] (2640) train_mae: 0.4298, test_mae: 2.2695, lr: 0.000000, 6.1s, 7.2s
+Num of epoch: 40
+2022-11-18 22:10:10,274 - INFO - epoch complete
+2022-11-18 22:10:10,275 - INFO - evaluating now!
+2022-11-18 22:10:11,352 - INFO - Epoch [40/200] (2706) train_mae: 0.4061, val_mae: 2.1648
+Num of epoch: 41
+2022-11-18 22:10:17,709 - INFO - epoch complete
+2022-11-18 22:10:17,709 - INFO - evaluating now!
+2022-11-18 22:10:18,776 - INFO - Epoch [41/200] (2772) train_mae: 0.4512, val_mae: 1.7593
+Num of epoch: 42
+2022-11-18 22:10:25,169 - INFO - epoch complete
+2022-11-18 22:10:25,169 - INFO - evaluating now!
+2022-11-18 22:10:26,216 - INFO - Epoch [42/200] (2838) train_mae: 0.4296, val_mae: 2.5617
+Num of epoch: 43
+2022-11-18 22:10:32,635 - INFO - epoch complete
+2022-11-18 22:10:32,635 - INFO - evaluating now!
+2022-11-18 22:10:33,675 - INFO - Epoch [43/200] (2904) train_mae: 0.4193, val_mae: 2.6724
+Num of epoch: 44
+2022-11-18 22:10:40,073 - INFO - epoch complete
+2022-11-18 22:10:40,073 - INFO - evaluating now!
+2022-11-18 22:10:41,093 - INFO - Epoch [44/200] (2970) train_mae: 0.3749, val_mae: 2.9497
+2022-11-18 22:10:43,118 - INFO - Test: mae: 2.8598, mape: 0.3887, rmse: 7.8976
+2022-11-18 22:10:43,118 - INFO - Horizon 15mins: mae: 0.5683, mape: 0.1357, rmse: 1.4039
+2022-11-18 22:10:43,118 - INFO - Horizon 30mins: mae: 1.7014, mape: 0.3406, rmse: 4.5824
+2022-11-18 22:10:43,119 - INFO - Horizon 60mins: mae: 5.1941, mape: 0.7928, rmse: 15.2949
+2022-11-18 22:10:43,121 - INFO - Epoch [44/200] (2970) train_mae: 0.3749, test_mae: 2.8598, lr: 0.000001, 6.4s, 7.4s
+Num of epoch: 45
+2022-11-18 22:10:49,229 - INFO - epoch complete
+2022-11-18 22:10:49,229 - INFO - evaluating now!
+2022-11-18 22:10:50,232 - INFO - Epoch [45/200] (3036) train_mae: 0.3911, val_mae: 2.5219
+Num of epoch: 46
+2022-11-18 22:10:56,752 - INFO - epoch complete
+2022-11-18 22:10:56,752 - INFO - evaluating now!
+2022-11-18 22:10:57,772 - INFO - Epoch [46/200] (3102) train_mae: 0.3847, val_mae: 1.8103
+Num of epoch: 47
+2022-11-18 22:11:03,946 - INFO - epoch complete
+2022-11-18 22:11:03,946 - INFO - evaluating now!
+2022-11-18 22:11:04,990 - INFO - Epoch [47/200] (3168) train_mae: 0.3947, val_mae: 2.1715
+Num of epoch: 48
+2022-11-18 22:11:11,180 - INFO - epoch complete
+2022-11-18 22:11:11,180 - INFO - evaluating now!
+2022-11-18 22:11:12,207 - INFO - Epoch [48/200] (3234) train_mae: 0.3690, val_mae: 2.1425
+Num of epoch: 49
+2022-11-18 22:11:18,955 - INFO - epoch complete
+2022-11-18 22:11:18,955 - INFO - evaluating now!
+2022-11-18 22:11:19,983 - INFO - Epoch [49/200] (3300) train_mae: 0.3596, val_mae: 2.3329
+2022-11-18 22:11:21,955 - INFO - Test: mae: 2.2562, mape: 0.4148, rmse: 4.0993
+2022-11-18 22:11:21,955 - INFO - Horizon 15mins: mae: 0.5498, mape: 0.1749, rmse: 1.0277
+2022-11-18 22:11:21,955 - INFO - Horizon 30mins: mae: 1.3262, mape: 0.3627, rmse: 2.8143
+2022-11-18 22:11:21,955 - INFO - Horizon 60mins: mae: 3.2257, mape: 0.8144, rmse: 7.3664
+2022-11-18 22:11:21,958 - INFO - Epoch [49/200] (3300) train_mae: 0.3596, test_mae: 2.2562, lr: 0.000001, 6.7s, 7.8s
+Num of epoch: 50
+2022-11-18 22:11:28,092 - INFO - epoch complete
+2022-11-18 22:11:28,092 - INFO - evaluating now!
+2022-11-18 22:11:29,096 - INFO - Epoch [50/200] (3366) train_mae: 0.3789, val_mae: 1.9743
+Num of epoch: 51
+2022-11-18 22:11:35,230 - INFO - epoch complete
+2022-11-18 22:11:35,230 - INFO - evaluating now!
+2022-11-18 22:11:36,295 - INFO - Epoch [51/200] (3432) train_mae: 0.4175, val_mae: 1.7032
+Num of epoch: 52
+2022-11-18 22:11:42,618 - INFO - epoch complete
+2022-11-18 22:11:42,618 - INFO - evaluating now!
+2022-11-18 22:11:43,667 - INFO - Epoch [52/200] (3498) train_mae: 0.3783, val_mae: 1.9195
+Num of epoch: 53
+2022-11-18 22:11:50,079 - INFO - epoch complete
+2022-11-18 22:11:50,080 - INFO - evaluating now!
+2022-11-18 22:11:51,093 - INFO - Epoch [53/200] (3564) train_mae: 0.3607, val_mae: 1.8942
+Num of epoch: 54
+2022-11-18 22:11:57,450 - INFO - epoch complete
+2022-11-18 22:11:57,450 - INFO - evaluating now!
+2022-11-18 22:11:58,524 - INFO - Epoch [54/200] (3630) train_mae: 0.3767, val_mae: 1.8260
+2022-11-18 22:12:00,514 - INFO - Test: mae: 1.7141, mape: 0.4124, rmse: 2.0150
+2022-11-18 22:12:00,514 - INFO - Horizon 15mins: mae: 0.3379, mape: 0.0894, rmse: 0.6535
+2022-11-18 22:12:00,514 - INFO - Horizon 30mins: mae: 0.7746, mape: 0.2837, rmse: 1.3372
+2022-11-18 22:12:00,514 - INFO - Horizon 60mins: mae: 2.2240, mape: 1.0290, rmse: 3.7079
+2022-11-18 22:12:00,516 - INFO - Epoch [54/200] (3630) train_mae: 0.3767, test_mae: 1.7141, lr: 0.000001, 6.4s, 7.4s
+Num of epoch: 55
+2022-11-18 22:12:06,758 - INFO - epoch complete
+2022-11-18 22:12:06,758 - INFO - evaluating now!
+2022-11-18 22:12:07,794 - INFO - Epoch [55/200] (3696) train_mae: 0.4424, val_mae: 1.8431
+Num of epoch: 56
+2022-11-18 22:12:13,985 - INFO - epoch complete
+2022-11-18 22:12:13,986 - INFO - evaluating now!
+2022-11-18 22:12:14,989 - INFO - Epoch [56/200] (3762) train_mae: 0.3478, val_mae: 1.7339
+Num of epoch: 57
+2022-11-18 22:12:21,101 - INFO - epoch complete
+2022-11-18 22:12:21,101 - INFO - evaluating now!
+2022-11-18 22:12:22,107 - INFO - Epoch [57/200] (3828) train_mae: 0.3550, val_mae: 2.0769
+Num of epoch: 58
+2022-11-18 22:12:28,371 - INFO - epoch complete
+2022-11-18 22:12:28,372 - INFO - evaluating now!
+2022-11-18 22:12:29,402 - INFO - Epoch [58/200] (3894) train_mae: 0.3641, val_mae: 2.2186
+Num of epoch: 59
+2022-11-18 22:12:35,541 - INFO - epoch complete
+2022-11-18 22:12:35,541 - INFO - evaluating now!
+2022-11-18 22:12:36,558 - INFO - Epoch [59/200] (3960) train_mae: 0.3420, val_mae: 1.9776
+2022-11-18 22:12:38,465 - INFO - Test: mae: 1.8854, mape: 0.5019, rmse: 2.7782
+2022-11-18 22:12:38,465 - INFO - Horizon 15mins: mae: 0.4106, mape: 0.1417, rmse: 0.7359
+2022-11-18 22:12:38,465 - INFO - Horizon 30mins: mae: 0.9753, mape: 0.3950, rmse: 1.8452
+2022-11-18 22:12:38,465 - INFO - Horizon 60mins: mae: 2.5689, mape: 1.1255, rmse: 5.0859
+2022-11-18 22:12:38,467 - INFO - Epoch [59/200] (3960) train_mae: 0.3420, test_mae: 1.8854, lr: 0.000001, 6.1s, 7.2s
+Num of epoch: 60
+2022-11-18 22:12:44,809 - INFO - epoch complete
+2022-11-18 22:12:44,810 - INFO - evaluating now!
+2022-11-18 22:12:45,870 - INFO - Epoch [60/200] (4026) train_mae: 0.3158, val_mae: 2.5788
+Num of epoch: 61
+2022-11-18 22:12:52,199 - INFO - epoch complete
+2022-11-18 22:12:52,200 - INFO - evaluating now!
+2022-11-18 22:12:53,267 - INFO - Epoch [61/200] (4092) train_mae: 0.3250, val_mae: 2.6285
+Num of epoch: 62
+2022-11-18 22:12:59,492 - INFO - epoch complete
+2022-11-18 22:12:59,492 - INFO - evaluating now!
+2022-11-18 22:13:00,512 - INFO - Epoch [62/200] (4158) train_mae: 0.3392, val_mae: 2.2921
+Num of epoch: 63
+2022-11-18 22:13:06,859 - INFO - epoch complete
+2022-11-18 22:13:06,859 - INFO - evaluating now!
+2022-11-18 22:13:07,876 - INFO - Epoch [63/200] (4224) train_mae: 0.3602, val_mae: 3.5321
+Num of epoch: 64
+2022-11-18 22:13:14,265 - INFO - epoch complete
+2022-11-18 22:13:14,265 - INFO - evaluating now!
+2022-11-18 22:13:15,278 - INFO - Epoch [64/200] (4290) train_mae: 0.4071, val_mae: 2.5115
+2022-11-18 22:13:17,262 - INFO - Test: mae: 2.4218, mape: 1.2867, rmse: 3.3563
+2022-11-18 22:13:17,262 - INFO - Horizon 15mins: mae: 0.5345, mape: 0.3873, rmse: 0.8325
+2022-11-18 22:13:17,262 - INFO - Horizon 30mins: mae: 1.3661, mape: 1.0223, rmse: 2.1665
+2022-11-18 22:13:17,262 - INFO - Horizon 60mins: mae: 3.7609, mape: 2.8997, rmse: 6.2284
+2022-11-18 22:13:17,264 - INFO - Epoch [64/200] (4290) train_mae: 0.4071, test_mae: 2.4218, lr: 0.000001, 6.4s, 7.4s
+Num of epoch: 65
+2022-11-18 22:13:23,592 - INFO - epoch complete
+2022-11-18 22:13:23,592 - INFO - evaluating now!
+2022-11-18 22:13:24,660 - INFO - Epoch [65/200] (4356) train_mae: 0.3440, val_mae: 1.8283
+Num of epoch: 66
+2022-11-18 22:13:30,967 - INFO - epoch complete
+2022-11-18 22:13:30,967 - INFO - evaluating now!
+2022-11-18 22:13:31,965 - INFO - Epoch [66/200] (4422) train_mae: 0.3440, val_mae: 1.7466
+Num of epoch: 67
+2022-11-18 22:13:38,085 - INFO - epoch complete
+2022-11-18 22:13:38,085 - INFO - evaluating now!
+2022-11-18 22:13:39,079 - INFO - Epoch [67/200] (4488) train_mae: 0.3269, val_mae: 3.5078
+Num of epoch: 68
+2022-11-18 22:13:45,152 - INFO - epoch complete
+2022-11-18 22:13:45,152 - INFO - evaluating now!
+2022-11-18 22:13:46,183 - INFO - Epoch [68/200] (4554) train_mae: 0.3041, val_mae: 2.6914
+Num of epoch: 69
+2022-11-18 22:13:52,364 - INFO - epoch complete
+2022-11-18 22:13:52,365 - INFO - evaluating now!
+2022-11-18 22:13:53,365 - INFO - Epoch [69/200] (4620) train_mae: 0.3107, val_mae: 2.1314
+2022-11-18 22:13:55,256 - INFO - Test: mae: 2.0551, mape: 0.4213, rmse: 3.5603
+2022-11-18 22:13:55,256 - INFO - Horizon 15mins: mae: 0.4385, mape: 0.1760, rmse: 0.7740
+2022-11-18 22:13:55,257 - INFO - Horizon 30mins: mae: 1.0871, mape: 0.3587, rmse: 2.2307
+2022-11-18 22:13:55,257 - INFO - Horizon 60mins: mae: 3.0621, mape: 0.8554, rmse: 6.6946
+2022-11-18 22:13:55,259 - INFO - Epoch [69/200] (4620) train_mae: 0.3107, test_mae: 2.0551, lr: 0.000001, 6.2s, 7.2s
+Num of epoch: 70
+2022-11-18 22:14:01,350 - INFO - epoch complete
+2022-11-18 22:14:01,350 - INFO - evaluating now!
+2022-11-18 22:14:02,368 - INFO - Epoch [70/200] (4686) train_mae: 0.3369, val_mae: 2.3696
+Num of epoch: 71
+2022-11-18 22:14:08,746 - INFO - epoch complete
+2022-11-18 22:14:08,747 - INFO - evaluating now!
+2022-11-18 22:14:09,791 - INFO - Epoch [71/200] (4752) train_mae: 0.3061, val_mae: 1.8055
+Num of epoch: 72
+2022-11-18 22:14:15,995 - INFO - epoch complete
+2022-11-18 22:14:15,995 - INFO - evaluating now!
+2022-11-18 22:14:16,994 - INFO - Epoch [72/200] (4818) train_mae: 0.3152, val_mae: 2.5833
+Num of epoch: 73
+2022-11-18 22:14:23,141 - INFO - epoch complete
+2022-11-18 22:14:23,142 - INFO - evaluating now!
+2022-11-18 22:14:24,143 - INFO - Epoch [73/200] (4884) train_mae: 0.3153, val_mae: 1.7764
+Num of epoch: 74
+2022-11-18 22:14:30,263 - INFO - epoch complete
+2022-11-18 22:14:30,263 - INFO - evaluating now!
+2022-11-18 22:14:31,280 - INFO - Epoch [74/200] (4950) train_mae: 0.2939, val_mae: 1.9093
+2022-11-18 22:14:33,165 - INFO - Test: mae: 1.8909, mape: 0.3879, rmse: 2.9271
+2022-11-18 22:14:33,165 - INFO - Horizon 15mins: mae: 0.3450, mape: 0.1472, rmse: 0.5647
+2022-11-18 22:14:33,165 - INFO - Horizon 30mins: mae: 0.9578, mape: 0.3238, rmse: 1.7621
+2022-11-18 22:14:33,165 - INFO - Horizon 60mins: mae: 2.6264, mape: 0.7828, rmse: 5.5531
+2022-11-18 22:14:33,168 - INFO - Epoch [74/200] (4950) train_mae: 0.2939, test_mae: 1.8909, lr: 0.000001, 6.1s, 7.1s
+Num of epoch: 75
+2022-11-18 22:14:39,352 - INFO - epoch complete
+2022-11-18 22:14:39,352 - INFO - evaluating now!
+2022-11-18 22:14:40,371 - INFO - Epoch [75/200] (5016) train_mae: 0.3166, val_mae: 2.6242
+Num of epoch: 76
+2022-11-18 22:14:46,418 - INFO - epoch complete
+2022-11-18 22:14:46,418 - INFO - evaluating now!
+2022-11-18 22:14:47,402 - INFO - Epoch [76/200] (5082) train_mae: 0.2908, val_mae: 1.7526
+Num of epoch: 77
+2022-11-18 22:14:53,520 - INFO - epoch complete
+2022-11-18 22:14:53,520 - INFO - evaluating now!
+2022-11-18 22:14:54,520 - INFO - Epoch [77/200] (5148) train_mae: 0.2761, val_mae: 2.4340
+Num of epoch: 78
+2022-11-18 22:15:00,620 - INFO - epoch complete
+2022-11-18 22:15:00,620 - INFO - evaluating now!
+2022-11-18 22:15:01,656 - INFO - Epoch [78/200] (5214) train_mae: 0.3138, val_mae: 2.6177
+Num of epoch: 79
+2022-11-18 22:15:07,776 - INFO - epoch complete
+2022-11-18 22:15:07,776 - INFO - evaluating now!
+2022-11-18 22:15:08,791 - INFO - Epoch [79/200] (5280) train_mae: 0.2897, val_mae: 1.8353
+2022-11-18 22:15:10,732 - INFO - Test: mae: 1.8215, mape: 0.1735, rmse: 5.0138
+2022-11-18 22:15:10,733 - INFO - Horizon 15mins: mae: 0.3489, mape: 0.0752, rmse: 0.7636
+2022-11-18 22:15:10,733 - INFO - Horizon 30mins: mae: 0.8687, mape: 0.1377, rmse: 2.6973
+2022-11-18 22:15:10,733 - INFO - Horizon 60mins: mae: 2.8874, mape: 0.3701, rmse: 9.9759
+2022-11-18 22:15:10,736 - INFO - Epoch [79/200] (5280) train_mae: 0.2897, test_mae: 1.8215, lr: 0.000001, 6.1s, 7.1s
+Num of epoch: 80
+2022-11-18 22:15:16,981 - INFO - epoch complete
+2022-11-18 22:15:16,981 - INFO - evaluating now!
+2022-11-18 22:15:17,984 - INFO - Epoch [80/200] (5346) train_mae: 0.3117, val_mae: 2.0491
+Num of epoch: 81
+2022-11-18 22:15:24,127 - INFO - epoch complete
+2022-11-18 22:15:24,127 - INFO - evaluating now!
+2022-11-18 22:15:25,132 - INFO - Epoch [81/200] (5412) train_mae: 0.2999, val_mae: 2.6218
+Num of epoch: 82
+2022-11-18 22:15:31,229 - INFO - epoch complete
+2022-11-18 22:15:31,229 - INFO - evaluating now!
+2022-11-18 22:15:32,222 - INFO - Epoch [82/200] (5478) train_mae: 0.2614, val_mae: 1.5916
+Num of epoch: 83
+2022-11-18 22:15:38,442 - INFO - epoch complete
+2022-11-18 22:15:38,442 - INFO - evaluating now!
+2022-11-18 22:15:39,419 - INFO - Epoch [83/200] (5544) train_mae: 0.2749, val_mae: 2.4395
+Num of epoch: 84
+2022-11-18 22:15:45,497 - INFO - epoch complete
+2022-11-18 22:15:45,498 - INFO - evaluating now!
+2022-11-18 22:15:46,502 - INFO - Epoch [84/200] (5610) train_mae: 0.2620, val_mae: 3.2248
+2022-11-18 22:15:48,385 - INFO - Test: mae: 3.0905, mape: 0.6699, rmse: 4.9207
+2022-11-18 22:15:48,386 - INFO - Horizon 15mins: mae: 1.0790, mape: 0.3812, rmse: 1.6635
+2022-11-18 22:15:48,386 - INFO - Horizon 30mins: mae: 2.0978, mape: 0.6495, rmse: 3.6211
+2022-11-18 22:15:48,386 - INFO - Horizon 60mins: mae: 4.3192, mape: 1.1199, rmse: 8.5937
+2022-11-18 22:15:48,388 - INFO - Epoch [84/200] (5610) train_mae: 0.2620, test_mae: 3.0905, lr: 0.000001, 6.1s, 7.1s
+Num of epoch: 85
+2022-11-18 22:15:54,503 - INFO - epoch complete
+2022-11-18 22:15:54,503 - INFO - evaluating now!
+2022-11-18 22:15:55,523 - INFO - Epoch [85/200] (5676) train_mae: 0.2652, val_mae: 2.2554
+Num of epoch: 86
+2022-11-18 22:16:01,647 - INFO - epoch complete
+2022-11-18 22:16:01,647 - INFO - evaluating now!
+2022-11-18 22:16:02,670 - INFO - Epoch [86/200] (5742) train_mae: 0.2704, val_mae: 2.2783
+Num of epoch: 87
+2022-11-18 22:16:08,819 - INFO - epoch complete
+2022-11-18 22:16:08,820 - INFO - evaluating now!
+2022-11-18 22:16:09,841 - INFO - Epoch [87/200] (5808) train_mae: 0.2386, val_mae: 1.6143
+Num of epoch: 88
+2022-11-18 22:16:15,939 - INFO - epoch complete
+2022-11-18 22:16:15,940 - INFO - evaluating now!
+2022-11-18 22:16:16,986 - INFO - Epoch [88/200] (5874) train_mae: 0.3026, val_mae: 2.7156
+Num of epoch: 89
+2022-11-18 22:16:23,270 - INFO - epoch complete
+2022-11-18 22:16:23,271 - INFO - evaluating now!
+2022-11-18 22:16:24,291 - INFO - Epoch [89/200] (5940) train_mae: 0.2359, val_mae: 2.8618
+2022-11-18 22:16:26,203 - INFO - Test: mae: 2.8222, mape: 0.6132, rmse: 5.8647
+2022-11-18 22:16:26,204 - INFO - Horizon 15mins: mae: 0.4289, mape: 0.1390, rmse: 0.9438
+2022-11-18 22:16:26,204 - INFO - Horizon 30mins: mae: 1.4961, mape: 0.4602, rmse: 3.1859
+2022-11-18 22:16:26,204 - INFO - Horizon 60mins: mae: 5.3416, mape: 1.4888, rmse: 11.6521
+2022-11-18 22:16:26,206 - INFO - Epoch [89/200] (5940) train_mae: 0.2359, test_mae: 2.8222, lr: 0.000001, 6.3s, 7.3s
+Num of epoch: 90
+2022-11-18 22:16:32,272 - INFO - epoch complete
+2022-11-18 22:16:32,273 - INFO - evaluating now!
+2022-11-18 22:16:33,261 - INFO - Epoch [90/200] (6006) train_mae: 0.2865, val_mae: 2.3180
+Num of epoch: 91
+2022-11-18 22:16:39,331 - INFO - epoch complete
+2022-11-18 22:16:39,331 - INFO - evaluating now!
+2022-11-18 22:16:40,361 - INFO - Epoch [91/200] (6072) train_mae: 0.2705, val_mae: 2.4396
+Num of epoch: 92
+2022-11-18 22:16:46,443 - INFO - epoch complete
+2022-11-18 22:16:46,443 - INFO - evaluating now!
+2022-11-18 22:16:47,457 - INFO - Epoch [92/200] (6138) train_mae: 0.2698, val_mae: 1.8432
+Num of epoch: 93
+2022-11-18 22:16:53,521 - INFO - epoch complete
+2022-11-18 22:16:53,522 - INFO - evaluating now!
+2022-11-18 22:16:54,540 - INFO - Epoch [93/200] (6204) train_mae: 0.2522, val_mae: 2.4599
+Num of epoch: 94
+2022-11-18 22:17:00,737 - INFO - epoch complete
+2022-11-18 22:17:00,738 - INFO - evaluating now!
+2022-11-18 22:17:01,750 - INFO - Epoch [94/200] (6270) train_mae: 0.2600, val_mae: 2.5086
+2022-11-18 22:17:03,720 - INFO - Test: mae: 3.3255, mape: 4.8322, rmse: 17.2246
+2022-11-18 22:17:03,720 - INFO - Horizon 15mins: mae: 0.7181, mape: 1.2297, rmse: 3.2290
+2022-11-18 22:17:03,720 - INFO - Horizon 30mins: mae: 1.9638, mape: 3.9652, rmse: 11.3273
+2022-11-18 22:17:03,721 - INFO - Horizon 60mins: mae: 5.7247, mape: 9.5766, rmse: 28.5658
+2022-11-18 22:17:03,723 - INFO - Epoch [94/200] (6270) train_mae: 0.2600, test_mae: 3.3255, lr: 0.000001, 6.2s, 7.2s
+Num of epoch: 95
+2022-11-18 22:17:09,981 - INFO - epoch complete
+2022-11-18 22:17:09,982 - INFO - evaluating now!
+2022-11-18 22:17:10,985 - INFO - Epoch [95/200] (6336) train_mae: 0.2676, val_mae: 1.9239
+Num of epoch: 96
+2022-11-18 22:17:17,139 - INFO - epoch complete
+2022-11-18 22:17:17,139 - INFO - evaluating now!
+2022-11-18 22:17:18,150 - INFO - Epoch [96/200] (6402) train_mae: 0.2536, val_mae: 2.2273
+Num of epoch: 97
+2022-11-18 22:17:24,537 - INFO - epoch complete
+2022-11-18 22:17:24,537 - INFO - evaluating now!
+2022-11-18 22:17:25,597 - INFO - Epoch [97/200] (6468) train_mae: 0.2661, val_mae: 2.3021
+Num of epoch: 98
+2022-11-18 22:17:31,827 - INFO - epoch complete
+2022-11-18 22:17:31,827 - INFO - evaluating now!
+2022-11-18 22:17:32,844 - INFO - Epoch [98/200] (6534) train_mae: 0.2605, val_mae: 5.1568
+Num of epoch: 99
+2022-11-18 22:17:38,938 - INFO - epoch complete
+2022-11-18 22:17:38,939 - INFO - evaluating now!
+2022-11-18 22:17:39,949 - INFO - Epoch [99/200] (6600) train_mae: 0.2954, val_mae: 3.4011
+2022-11-18 22:17:41,883 - INFO - Test: mae: 3.3506, mape: 0.7244, rmse: 7.9052
+2022-11-18 22:17:41,883 - INFO - Horizon 15mins: mae: 1.0847, mape: 0.4750, rmse: 2.2117
+2022-11-18 22:17:41,883 - INFO - Horizon 30mins: mae: 2.3537, mape: 0.7918, rmse: 5.7803
+2022-11-18 22:17:41,883 - INFO - Horizon 60mins: mae: 5.1068, mape: 1.0305, rmse: 13.7084
+2022-11-18 22:17:41,886 - INFO - Epoch [99/200] (6600) train_mae: 0.2954, test_mae: 3.3506, lr: 0.000001, 6.1s, 7.1s
+Num of epoch: 100
+2022-11-18 22:17:48,049 - INFO - epoch complete
+2022-11-18 22:17:48,049 - INFO - evaluating now!
+2022-11-18 22:17:49,072 - INFO - Epoch [100/200] (6666) train_mae: 0.2865, val_mae: 1.5358
+Num of epoch: 101
+2022-11-18 22:17:55,306 - INFO - epoch complete
+2022-11-18 22:17:55,306 - INFO - evaluating now!
+2022-11-18 22:17:56,332 - INFO - Epoch [101/200] (6732) train_mae: 0.2594, val_mae: 3.3693
+Num of epoch: 102
+2022-11-18 22:18:02,472 - INFO - epoch complete
+2022-11-18 22:18:02,472 - INFO - evaluating now!
+2022-11-18 22:18:03,487 - INFO - Epoch [102/200] (6798) train_mae: 0.2671, val_mae: 2.2061
+Num of epoch: 103
+2022-11-18 22:18:09,592 - INFO - epoch complete
+2022-11-18 22:18:09,593 - INFO - evaluating now!
+2022-11-18 22:18:10,592 - INFO - Epoch [103/200] (6864) train_mae: 0.2596, val_mae: 2.4924
+Num of epoch: 104
+2022-11-18 22:18:16,858 - INFO - epoch complete
+2022-11-18 22:18:16,858 - INFO - evaluating now!
+2022-11-18 22:18:17,914 - INFO - Epoch [104/200] (6930) train_mae: 0.2494, val_mae: 3.2010
+2022-11-18 22:18:19,817 - INFO - Test: mae: 3.2668, mape: 1.1345, rmse: 4.8638
+2022-11-18 22:18:19,817 - INFO - Horizon 15mins: mae: 0.8110, mape: 0.4079, rmse: 1.1386
+2022-11-18 22:18:19,817 - INFO - Horizon 30mins: mae: 2.0458, mape: 0.9576, rmse: 3.0535
+2022-11-18 22:18:19,818 - INFO - Horizon 60mins: mae: 5.5551, mape: 2.3839, rmse: 9.1689
+2022-11-18 22:18:19,820 - INFO - Epoch [104/200] (6930) train_mae: 0.2494, test_mae: 3.2668, lr: 0.000001, 6.3s, 7.3s
+Num of epoch: 105
+2022-11-18 22:18:26,120 - INFO - epoch complete
+2022-11-18 22:18:26,121 - INFO - evaluating now!
+2022-11-18 22:18:27,213 - INFO - Epoch [105/200] (6996) train_mae: 0.2772, val_mae: 2.2251
+Num of epoch: 106
+2022-11-18 22:18:33,596 - INFO - epoch complete
+2022-11-18 22:18:33,596 - INFO - evaluating now!
+2022-11-18 22:18:34,602 - INFO - Epoch [106/200] (7062) train_mae: 0.2258, val_mae: 3.1688
+Num of epoch: 107
+2022-11-18 22:18:40,724 - INFO - epoch complete
+2022-11-18 22:18:40,724 - INFO - evaluating now!
+2022-11-18 22:18:41,725 - INFO - Epoch [107/200] (7128) train_mae: 0.2472, val_mae: 1.6963
+Num of epoch: 108
+2022-11-18 22:18:47,895 - INFO - epoch complete
+2022-11-18 22:18:47,895 - INFO - evaluating now!
+2022-11-18 22:18:48,896 - INFO - Epoch [108/200] (7194) train_mae: 0.2436, val_mae: 2.3990
+Num of epoch: 109
+2022-11-18 22:18:55,214 - INFO - epoch complete
+2022-11-18 22:18:55,215 - INFO - evaluating now!
+2022-11-18 22:18:56,234 - INFO - Epoch [109/200] (7260) train_mae: 0.2414, val_mae: 4.0318
+2022-11-18 22:18:58,194 - INFO - Test: mae: 3.9215, mape: 1.8164, rmse: 6.3168
+2022-11-18 22:18:58,194 - INFO - Horizon 15mins: mae: 1.0738, mape: 0.6074, rmse: 1.5727
+2022-11-18 22:18:58,194 - INFO - Horizon 30mins: mae: 2.6940, mape: 1.5224, rmse: 4.2346
+2022-11-18 22:18:58,194 - INFO - Horizon 60mins: mae: 6.8932, mape: 3.8973, rmse: 11.4881
+2022-11-18 22:18:58,196 - INFO - Epoch [109/200] (7260) train_mae: 0.2414, test_mae: 3.9215, lr: 0.000001, 6.3s, 7.3s
+Num of epoch: 110
+2022-11-18 22:19:04,362 - INFO - epoch complete
+2022-11-18 22:19:04,362 - INFO - evaluating now!
+2022-11-18 22:19:05,366 - INFO - Epoch [110/200] (7326) train_mae: 0.2957, val_mae: 1.9401
+Num of epoch: 111
+2022-11-18 22:19:11,522 - INFO - epoch complete
+2022-11-18 22:19:11,522 - INFO - evaluating now!
+2022-11-18 22:19:12,529 - INFO - Epoch [111/200] (7392) train_mae: 0.2168, val_mae: 2.4005
+Num of epoch: 112
+2022-11-18 22:19:18,658 - INFO - epoch complete
+2022-11-18 22:19:18,658 - INFO - evaluating now!
+2022-11-18 22:19:19,689 - INFO - Epoch [112/200] (7458) train_mae: 0.2667, val_mae: 2.9010
+Num of epoch: 113
+2022-11-18 22:19:25,912 - INFO - epoch complete
+2022-11-18 22:19:25,912 - INFO - evaluating now!
+2022-11-18 22:19:26,949 - INFO - Epoch [113/200] (7524) train_mae: 0.2424, val_mae: 2.4991
+Num of epoch: 114
+2022-11-18 22:19:33,272 - INFO - epoch complete
+2022-11-18 22:19:33,273 - INFO - evaluating now!
+2022-11-18 22:19:34,304 - INFO - Epoch [114/200] (7590) train_mae: 0.2000, val_mae: 1.8413
+2022-11-18 22:19:36,378 - INFO - Test: mae: 1.7620, mape: 0.2821, rmse: 3.5123
+2022-11-18 22:19:36,378 - INFO - Horizon 15mins: mae: 0.2702, mape: 0.0842, rmse: 0.4812
+2022-11-18 22:19:36,378 - INFO - Horizon 30mins: mae: 0.7633, mape: 0.2144, rmse: 1.6630
+2022-11-18 22:19:36,378 - INFO - Horizon 60mins: mae: 2.7845, mape: 0.6521, rmse: 7.2149
+2022-11-18 22:19:36,381 - INFO - Epoch [114/200] (7590) train_mae: 0.2000, test_mae: 1.7620, lr: 0.000001, 6.3s, 7.4s
+Num of epoch: 115
+2022-11-18 22:19:42,541 - INFO - epoch complete
+2022-11-18 22:19:42,542 - INFO - evaluating now!
+2022-11-18 22:19:43,546 - INFO - Epoch [115/200] (7656) train_mae: 0.2168, val_mae: 2.2974
+Num of epoch: 116
+2022-11-18 22:19:49,725 - INFO - epoch complete
+2022-11-18 22:19:49,725 - INFO - evaluating now!
+2022-11-18 22:19:50,730 - INFO - Epoch [116/200] (7722) train_mae: 0.2149, val_mae: 2.4797
+Num of epoch: 117
+2022-11-18 22:19:56,925 - INFO - evaluating now!
+2022-11-18 22:19:57,936 - INFO - Epoch [117/200] (7788) train_mae: 0.2050, val_mae: 2.4158
+Num of epoch: 118
+2022-11-18 22:20:04,262 - INFO - epoch complete
+2022-11-18 22:20:04,262 - INFO - evaluating now!
+2022-11-18 22:20:05,260 - INFO - Epoch [118/200] (7854) train_mae: 0.2185, val_mae: 3.0969
+Num of epoch: 119
+2022-11-18 22:20:11,558 - INFO - epoch complete
+2022-11-18 22:20:11,558 - INFO - evaluating now!
+2022-11-18 22:20:12,629 - INFO - Epoch [119/200] (7920) train_mae: 0.2126, val_mae: 2.5147
+2022-11-18 22:20:14,578 - INFO - Test: mae: 2.5219, mape: 0.9242, rmse: 4.3142
+2022-11-18 22:20:14,578 - INFO - Horizon 15mins: mae: 0.2947, mape: 0.1201, rmse: 0.5694
+2022-11-18 22:20:14,578 - INFO - Horizon 30mins: mae: 1.2604, mape: 0.6202, rmse: 2.3114
+2022-11-18 22:20:14,578 - INFO - Horizon 60mins: mae: 4.8164, mape: 2.4213, rmse: 8.5270
+2022-11-18 22:20:14,580 - INFO - Epoch [119/200] (7920) train_mae: 0.2126, test_mae: 2.5219, lr: 0.000001, 6.3s, 7.4s
+Num of epoch: 120
+2022-11-18 22:20:20,814 - INFO - epoch complete
+2022-11-18 22:20:20,814 - INFO - evaluating now!
+2022-11-18 22:20:21,892 - INFO - Epoch [120/200] (7986) train_mae: 0.2279, val_mae: 2.2679
+Num of epoch: 121
+2022-11-18 22:20:28,050 - INFO - epoch complete
+2022-11-18 22:20:28,050 - INFO - evaluating now!
+2022-11-18 22:20:29,058 - INFO - Epoch [121/200] (8052) train_mae: 0.2074, val_mae: 2.5578
+Num of epoch: 122
+2022-11-18 22:20:35,355 - INFO - epoch complete
+2022-11-18 22:20:35,355 - INFO - evaluating now!
+2022-11-18 22:20:36,423 - INFO - Epoch [122/200] (8118) train_mae: 0.2125, val_mae: 2.5793
+Num of epoch: 123
+2022-11-18 22:20:42,712 - INFO - epoch complete
+2022-11-18 22:20:42,712 - INFO - evaluating now!
+2022-11-18 22:20:43,719 - INFO - Epoch [123/200] (8184) train_mae: 0.2305, val_mae: 3.6283
+Num of epoch: 124
+2022-11-18 22:20:49,809 - INFO - epoch complete
+2022-11-18 22:20:49,810 - INFO - evaluating now!
+2022-11-18 22:20:50,821 - INFO - Epoch [124/200] (8250) train_mae: 0.2195, val_mae: 1.4227
+2022-11-18 22:20:52,815 - INFO - Test: mae: 1.3621, mape: 0.1843, rmse: 1.8407
+2022-11-18 22:20:52,815 - INFO - Horizon 15mins: mae: 0.2772, mape: 0.0867, rmse: 0.4902
+2022-11-18 22:20:52,815 - INFO - Horizon 30mins: mae: 0.5435, mape: 0.1165, rmse: 1.1769
+2022-11-18 22:20:52,815 - INFO - Horizon 60mins: mae: 1.5768, mape: 0.4487, rmse: 3.4545
+2022-11-18 22:20:52,818 - INFO - Epoch [124/200] (8250) train_mae: 0.2195, test_mae: 1.3621, lr: 0.000001, 6.1s, 7.1s
+Num of epoch: 125
+2022-11-18 22:20:58,985 - INFO - epoch complete
+2022-11-18 22:20:58,985 - INFO - evaluating now!
+2022-11-18 22:20:59,985 - INFO - Epoch [125/200] (8316) train_mae: 0.1979, val_mae: 1.6993
+Num of epoch: 126
+2022-11-18 22:21:06,163 - INFO - epoch complete
+2022-11-18 22:21:06,163 - INFO - evaluating now!
+2022-11-18 22:21:07,180 - INFO - Epoch [126/200] (8382) train_mae: 0.2023, val_mae: 2.7901
+Num of epoch: 127
+2022-11-18 22:21:13,388 - INFO - epoch complete
+2022-11-18 22:21:13,389 - INFO - evaluating now!
+2022-11-18 22:21:14,390 - INFO - Epoch [127/200] (8448) train_mae: 0.2087, val_mae: 2.8978
+Num of epoch: 128
+2022-11-18 22:21:20,472 - INFO - epoch complete
+2022-11-18 22:21:20,472 - INFO - evaluating now!
+2022-11-18 22:21:21,469 - INFO - Epoch [128/200] (8514) train_mae: 0.2272, val_mae: 1.6545
+Num of epoch: 129
+2022-11-18 22:21:27,705 - INFO - epoch complete
+2022-11-18 22:21:27,705 - INFO - evaluating now!
+2022-11-18 22:21:28,759 - INFO - Epoch [129/200] (8580) train_mae: 0.1974, val_mae: 1.4953
+2022-11-18 22:21:30,661 - INFO - Test: mae: 1.4898, mape: 0.2881, rmse: 1.8982
+2022-11-18 22:21:30,661 - INFO - Horizon 15mins: mae: 0.4430, mape: 0.2077, rmse: 0.9376
+2022-11-18 22:21:30,661 - INFO - Horizon 30mins: mae: 0.7432, mape: 0.3176, rmse: 1.4640
+2022-11-18 22:21:30,661 - INFO - Horizon 60mins: mae: 1.5569, mape: 0.3708, rmse: 3.3901
+2022-11-18 22:21:30,663 - INFO - Epoch [129/200] (8580) train_mae: 0.1974, test_mae: 1.4898, lr: 0.000001, 6.2s, 7.3s
+Num of epoch: 130
+2022-11-18 22:21:36,907 - INFO - epoch complete
+2022-11-18 22:21:36,907 - INFO - evaluating now!
+2022-11-18 22:21:37,951 - INFO - Epoch [130/200] (8646) train_mae: 0.2226, val_mae: 3.2932
+Num of epoch: 131
+2022-11-18 22:21:44,235 - INFO - epoch complete
+2022-11-18 22:21:44,236 - INFO - evaluating now!
+2022-11-18 22:21:45,233 - INFO - Epoch [131/200] (8712) train_mae: 0.1837, val_mae: 1.9166
+Num of epoch: 132
+2022-11-18 22:21:51,419 - INFO - epoch complete
+2022-11-18 22:21:51,419 - INFO - evaluating now!
+2022-11-18 22:21:52,439 - INFO - Epoch [132/200] (8778) train_mae: 0.2507, val_mae: 2.2268
+Num of epoch: 133
+2022-11-18 22:21:58,563 - INFO - epoch complete
+2022-11-18 22:21:58,563 - INFO - evaluating now!
+2022-11-18 22:21:59,577 - INFO - Epoch [133/200] (8844) train_mae: 0.2266, val_mae: 2.1347
+Num of epoch: 134
+2022-11-18 22:22:05,757 - INFO - epoch complete
+2022-11-18 22:22:05,757 - INFO - evaluating now!
+2022-11-18 22:22:06,775 - INFO - Epoch [134/200] (8910) train_mae: 0.2176, val_mae: 3.7318
+2022-11-18 22:22:08,709 - INFO - Test: mae: 3.3828, mape: 1.1456, rmse: 4.1653
+2022-11-18 22:22:08,709 - INFO - Horizon 15mins: mae: 0.9128, mape: 0.4413, rmse: 1.2324
+2022-11-18 22:22:08,709 - INFO - Horizon 30mins: mae: 2.0673, mape: 0.9603, rmse: 2.8747
+2022-11-18 22:22:08,710 - INFO - Horizon 60mins: mae: 5.2228, mape: 2.3778, rmse: 7.5009
+2022-11-18 22:22:08,711 - INFO - Epoch [134/200] (8910) train_mae: 0.2176, test_mae: 3.3828, lr: 0.000001, 6.2s, 7.2s
+Num of epoch: 135
+2022-11-18 22:22:14,881 - INFO - epoch complete
+2022-11-18 22:22:14,881 - INFO - evaluating now!
+2022-11-18 22:22:15,867 - INFO - Epoch [135/200] (8976) train_mae: 0.2379, val_mae: 5.2149
+Num of epoch: 136
+2022-11-18 22:22:21,932 - INFO - epoch complete
+2022-11-18 22:22:21,932 - INFO - evaluating now!
+2022-11-18 22:22:22,979 - INFO - Epoch [136/200] (9042) train_mae: 0.2649, val_mae: 3.2197
+Num of epoch: 137
+2022-11-18 22:22:29,216 - INFO - epoch complete
+2022-11-18 22:22:29,216 - INFO - evaluating now!
+2022-11-18 22:22:30,230 - INFO - Epoch [137/200] (9108) train_mae: 0.2371, val_mae: 3.5920
+Num of epoch: 138
+2022-11-18 22:22:36,349 - INFO - epoch complete
+2022-11-18 22:22:36,349 - INFO - evaluating now!
+2022-11-18 22:22:37,363 - INFO - Epoch [138/200] (9174) train_mae: 0.2234, val_mae: 2.8508
+Num of epoch: 139
+2022-11-18 22:22:43,656 - INFO - epoch complete
+2022-11-18 22:22:43,656 - INFO - evaluating now!
+2022-11-18 22:22:44,683 - INFO - Epoch [139/200] (9240) train_mae: 0.1912, val_mae: 1.3695
+2022-11-18 22:22:46,620 - INFO - Test: mae: 1.3582, mape: 0.1748, rmse: 1.7692
+2022-11-18 22:22:46,620 - INFO - Horizon 15mins: mae: 0.2683, mape: 0.0769, rmse: 0.4909
+2022-11-18 22:22:46,620 - INFO - Horizon 30mins: mae: 0.5758, mape: 0.1373, rmse: 1.1870
+2022-11-18 22:22:46,620 - INFO - Horizon 60mins: mae: 1.4681, mape: 0.3698, rmse: 3.2615
+2022-11-18 22:22:46,623 - INFO - Epoch [139/200] (9240) train_mae: 0.1912, test_mae: 1.3582, lr: 0.000001, 6.3s, 7.3s
+Num of epoch: 140
+2022-11-18 22:22:52,821 - INFO - epoch complete
+2022-11-18 22:22:52,821 - INFO - evaluating now!
+2022-11-18 22:22:53,813 - INFO - Epoch [140/200] (9306) train_mae: 0.1986, val_mae: 2.4200
+Num of epoch: 141
+2022-11-18 22:22:59,929 - INFO - epoch complete
+2022-11-18 22:22:59,930 - INFO - evaluating now!
+2022-11-18 22:23:00,930 - INFO - Epoch [141/200] (9372) train_mae: 0.2073, val_mae: 1.4629
+Num of epoch: 142
+2022-11-18 22:23:07,055 - INFO - epoch complete
+2022-11-18 22:23:07,056 - INFO - evaluating now!
+2022-11-18 22:23:08,068 - INFO - Epoch [142/200] (9438) train_mae: 0.2118, val_mae: 2.1444
+Num of epoch: 143
+2022-11-18 22:23:14,460 - INFO - epoch complete
+2022-11-18 22:23:14,461 - INFO - evaluating now!
+2022-11-18 22:23:15,458 - INFO - Epoch [143/200] (9504) train_mae: 0.1871, val_mae: 2.1479
+Num of epoch: 144
+2022-11-18 22:23:21,547 - INFO - epoch complete
+2022-11-18 22:23:21,548 - INFO - evaluating now!
+2022-11-18 22:23:22,584 - INFO - Epoch [144/200] (9570) train_mae: 0.2346, val_mae: 2.1654
+2022-11-18 22:23:24,498 - INFO - Test: mae: 2.0829, mape: 0.5466, rmse: 3.4865
+2022-11-18 22:23:24,498 - INFO - Horizon 15mins: mae: 0.3065, mape: 0.1140, rmse: 0.5087
+2022-11-18 22:23:24,498 - INFO - Horizon 30mins: mae: 0.8381, mape: 0.2775, rmse: 1.6911
+2022-11-18 22:23:24,498 - INFO - Horizon 60mins: mae: 3.5928, mape: 1.5248, rmse: 7.0862
+2022-11-18 22:23:24,501 - INFO - Epoch [144/200] (9570) train_mae: 0.2346, test_mae: 2.0829, lr: 0.000001, 6.1s, 7.1s
+Num of epoch: 145
+2022-11-18 22:23:30,670 - INFO - epoch complete
+2022-11-18 22:23:30,670 - INFO - evaluating now!
+2022-11-18 22:23:31,684 - INFO - Epoch [145/200] (9636) train_mae: 0.2377, val_mae: 2.0896
+Num of epoch: 146
+2022-11-18 22:23:37,839 - INFO - epoch complete
+2022-11-18 22:23:37,840 - INFO - evaluating now!
+2022-11-18 22:23:38,853 - INFO - Epoch [146/200] (9702) train_mae: 0.1887, val_mae: 2.0922
+Num of epoch: 147
+2022-11-18 22:23:44,938 - INFO - epoch complete
+2022-11-18 22:23:44,938 - INFO - evaluating now!
+2022-11-18 22:23:45,955 - INFO - Epoch [147/200] (9768) train_mae: 0.1886, val_mae: 3.7392
+Num of epoch: 148
+2022-11-18 22:23:52,214 - INFO - epoch complete
+2022-11-18 22:23:52,215 - INFO - evaluating now!
+2022-11-18 22:23:53,260 - INFO - Epoch [148/200] (9834) train_mae: 0.2081, val_mae: 1.8608
+Num of epoch: 149
+2022-11-18 22:23:59,490 - INFO - epoch complete
+2022-11-18 22:23:59,491 - INFO - evaluating now!
+2022-11-18 22:24:00,492 - INFO - Epoch [149/200] (9900) train_mae: 0.1816, val_mae: 2.8841
+2022-11-18 22:24:02,411 - INFO - Test: mae: 2.7308, mape: 0.4710, rmse: 5.1963
+2022-11-18 22:24:02,411 - INFO - Horizon 15mins: mae: 0.7023, mape: 0.2503, rmse: 1.2062
+2022-11-18 22:24:02,411 - INFO - Horizon 30mins: mae: 1.6057, mape: 0.4187, rmse: 3.2123
+2022-11-18 22:24:02,411 - INFO - Horizon 60mins: mae: 4.3309, mape: 0.8608, rmse: 9.8084
+2022-11-18 22:24:02,413 - INFO - Epoch [149/200] (9900) train_mae: 0.1816, test_mae: 2.7308, lr: 0.000001, 6.2s, 7.2s
+Num of epoch: 150
+2022-11-18 22:24:08,575 - INFO - epoch complete
+2022-11-18 22:24:08,575 - INFO - evaluating now!
+2022-11-18 22:24:09,595 - INFO - Epoch [150/200] (9966) train_mae: 0.2105, val_mae: 2.3755
+Num of epoch: 151
+2022-11-18 22:24:15,737 - INFO - epoch complete
+2022-11-18 22:24:15,737 - INFO - evaluating now!
+2022-11-18 22:24:16,740 - INFO - Epoch [151/200] (10032) train_mae: 0.2473, val_mae: 4.1581
+Num of epoch: 152
+2022-11-18 22:24:22,852 - INFO - epoch complete
+2022-11-18 22:24:22,852 - INFO - evaluating now!
+2022-11-18 22:24:23,844 - INFO - Epoch [152/200] (10098) train_mae: 0.2008, val_mae: 2.0779
+Num of epoch: 153
+2022-11-18 22:24:29,927 - INFO - epoch complete
+2022-11-18 22:24:29,928 - INFO - evaluating now!
+2022-11-18 22:24:30,928 - INFO - Epoch [153/200] (10164) train_mae: 0.1961, val_mae: 2.3872
+Num of epoch: 154
+2022-11-18 22:24:36,988 - INFO - epoch complete
+2022-11-18 22:24:36,988 - INFO - evaluating now!
+2022-11-18 22:24:37,992 - INFO - Epoch [154/200] (10230) train_mae: 0.2023, val_mae: 2.6047
+2022-11-18 22:24:39,888 - INFO - Test: mae: 2.5066, mape: 0.7562, rmse: 3.2465
+2022-11-18 22:24:39,888 - INFO - Horizon 15mins: mae: 0.4757, mape: 0.2292, rmse: 0.9123
+2022-11-18 22:24:39,888 - INFO - Horizon 30mins: mae: 1.3296, mape: 0.5162, rmse: 2.2416
+2022-11-18 22:24:39,889 - INFO - Horizon 60mins: mae: 4.3231, mape: 1.8900, rmse: 5.8704
+2022-11-18 22:24:39,891 - INFO - Epoch [154/200] (10230) train_mae: 0.2023, test_mae: 2.5066, lr: 0.000001, 6.1s, 7.1s
+Num of epoch: 155
+2022-11-18 22:24:46,031 - INFO - epoch complete
+2022-11-18 22:24:46,031 - INFO - evaluating now!
+2022-11-18 22:24:47,027 - INFO - Epoch [155/200] (10296) train_mae: 0.2421, val_mae: 4.0651
+Num of epoch: 156
+2022-11-18 22:24:53,163 - INFO - epoch complete
+2022-11-18 22:24:53,164 - INFO - evaluating now!
+2022-11-18 22:24:54,150 - INFO - Epoch [156/200] (10362) train_mae: 0.2455, val_mae: 1.4259
+Num of epoch: 157
+2022-11-18 22:25:00,385 - INFO - epoch complete
+2022-11-18 22:25:00,385 - INFO - evaluating now!
+2022-11-18 22:25:01,432 - INFO - Epoch [157/200] (10428) train_mae: 0.1731, val_mae: 1.7685
+Num of epoch: 158
+2022-11-18 22:25:07,556 - INFO - epoch complete
+2022-11-18 22:25:07,556 - INFO - evaluating now!
+2022-11-18 22:25:08,589 - INFO - Epoch [158/200] (10494) train_mae: 0.2031, val_mae: 1.6572
+Num of epoch: 159
+2022-11-18 22:25:14,824 - INFO - epoch complete
+2022-11-18 22:25:14,824 - INFO - evaluating now!
+2022-11-18 22:25:15,825 - INFO - Epoch [159/200] (10560) train_mae: 0.2238, val_mae: 4.4736
+2022-11-18 22:25:17,716 - INFO - Test: mae: 4.3913, mape: 1.8644, rmse: 5.9665
+2022-11-18 22:25:17,716 - INFO - Horizon 15mins: mae: 0.6480, mape: 0.1954, rmse: 1.2396
+2022-11-18 22:25:17,716 - INFO - Horizon 30mins: mae: 2.6601, mape: 1.2430, rmse: 3.6957
+2022-11-18 22:25:17,717 - INFO - Horizon 60mins: mae: 8.8545, mape: 4.9191, rmse: 11.1890
+2022-11-18 22:25:17,718 - INFO - Epoch [159/200] (10560) train_mae: 0.2238, test_mae: 4.3913, lr: 0.000001, 6.2s, 7.2s
+Num of epoch: 160
+2022-11-18 22:25:23,861 - INFO - epoch complete
+2022-11-18 22:25:23,861 - INFO - evaluating now!
+2022-11-18 22:25:24,898 - INFO - Epoch [160/200] (10626) train_mae: 0.2485, val_mae: 1.9441
+Num of epoch: 161
+2022-11-18 22:25:31,039 - INFO - epoch complete
+2022-11-18 22:25:31,039 - INFO - evaluating now!
+2022-11-18 22:25:32,058 - INFO - Epoch [161/200] (10692) train_mae: 0.2277, val_mae: 2.5486
+Num of epoch: 162
+2022-11-18 22:25:38,507 - INFO - epoch complete
+2022-11-18 22:25:38,507 - INFO - evaluating now!
+2022-11-18 22:25:39,522 - INFO - Epoch [162/200] (10758) train_mae: 0.1832, val_mae: 2.4346
+Num of epoch: 163
+2022-11-18 22:25:45,644 - INFO - epoch complete
+2022-11-18 22:25:45,644 - INFO - evaluating now!
+2022-11-18 22:25:46,646 - INFO - Epoch [163/200] (10824) train_mae: 0.2167, val_mae: 2.0758
+Num of epoch: 164
+2022-11-18 22:25:52,781 - INFO - epoch complete
+2022-11-18 22:25:52,781 - INFO - evaluating now!
+2022-11-18 22:25:53,794 - INFO - Epoch [164/200] (10890) train_mae: 0.2330, val_mae: 5.1615
+2022-11-18 22:25:55,735 - INFO - Test: mae: 5.0458, mape: 2.1178, rmse: 6.1732
+2022-11-18 22:25:55,735 - INFO - Horizon 15mins: mae: 1.2289, mape: 0.6717, rmse: 1.5706
+2022-11-18 22:25:55,735 - INFO - Horizon 30mins: mae: 3.1770, mape: 1.7397, rmse: 3.9905
+2022-11-18 22:25:55,735 - INFO - Horizon 60mins: mae: 8.7305, mape: 4.6766, rmse: 11.5207
+2022-11-18 22:25:55,737 - INFO - Epoch [164/200] (10890) train_mae: 0.2330, test_mae: 5.0458, lr: 0.000001, 6.1s, 7.1s
+Num of epoch: 165
+2022-11-18 22:26:01,956 - INFO - epoch complete
+2022-11-18 22:26:01,956 - INFO - evaluating now!
+2022-11-18 22:26:02,987 - INFO - Epoch [165/200] (10956) train_mae: 0.2246, val_mae: 2.2659
+Num of epoch: 166
+2022-11-18 22:26:09,277 - INFO - epoch complete
+2022-11-18 22:26:09,277 - INFO - evaluating now!
+2022-11-18 22:26:10,380 - INFO - Epoch [166/200] (11022) train_mae: 0.2041, val_mae: 2.2136
+Num of epoch: 167
+2022-11-18 22:26:16,509 - INFO - epoch complete
+2022-11-18 22:26:16,510 - INFO - evaluating now!
+2022-11-18 22:26:17,529 - INFO - Epoch [167/200] (11088) train_mae: 0.2198, val_mae: 3.5402
+Num of epoch: 168
+2022-11-18 22:26:23,742 - INFO - epoch complete
+2022-11-18 22:26:23,742 - INFO - evaluating now!
+2022-11-18 22:26:24,744 - INFO - Epoch [168/200] (11154) train_mae: 0.2287, val_mae: 2.2328
+Num of epoch: 169
+2022-11-18 22:26:30,870 - INFO - epoch complete
+2022-11-18 22:26:30,870 - INFO - evaluating now!
+2022-11-18 22:26:31,883 - INFO - Epoch [169/200] (11220) train_mae: 0.2342, val_mae: 2.6952
+2022-11-18 22:26:33,789 - INFO - Test: mae: 2.7129, mape: 0.7893, rmse: 3.8029
+2022-11-18 22:26:33,790 - INFO - Horizon 15mins: mae: 0.9709, mape: 0.4089, rmse: 1.3744
+2022-11-18 22:26:33,790 - INFO - Horizon 30mins: mae: 1.8115, mape: 0.7716, rmse: 2.6878
+2022-11-18 22:26:33,790 - INFO - Horizon 60mins: mae: 3.5600, mape: 1.3474, rmse: 7.0470
+2022-11-18 22:26:33,793 - INFO - Epoch [169/200] (11220) train_mae: 0.2342, test_mae: 2.7129, lr: 0.000001, 6.1s, 7.1s
+Num of epoch: 170
+2022-11-18 22:26:39,938 - INFO - epoch complete
+2022-11-18 22:26:39,938 - INFO - evaluating now!
+2022-11-18 22:26:40,945 - INFO - Epoch [170/200] (11286) train_mae: 0.2512, val_mae: 2.9109
+Num of epoch: 171
+2022-11-18 22:26:47,034 - INFO - epoch complete
+2022-11-18 22:26:47,034 - INFO - evaluating now!
+2022-11-18 22:26:48,039 - INFO - Epoch [171/200] (11352) train_mae: 0.2087, val_mae: 3.5676
+Num of epoch: 172
+2022-11-18 22:26:54,351 - INFO - epoch complete
+2022-11-18 22:26:54,351 - INFO - evaluating now!
+2022-11-18 22:26:55,388 - INFO - Epoch [172/200] (11418) train_mae: 0.2135, val_mae: 2.7683
+Num of epoch: 173
+2022-11-18 22:27:01,588 - INFO - epoch complete
+2022-11-18 22:27:01,588 - INFO - evaluating now!
+2022-11-18 22:27:02,601 - INFO - Epoch [173/200] (11484) train_mae: 0.2265, val_mae: 2.9921
+Num of epoch: 174
+2022-11-18 22:27:08,925 - INFO - epoch complete
+2022-11-18 22:27:08,925 - INFO - evaluating now!
+2022-11-18 22:27:09,948 - INFO - Epoch [174/200] (11550) train_mae: 0.2441, val_mae: 2.2474
+2022-11-18 22:27:11,861 - INFO - Test: mae: 2.2618, mape: 0.2529, rmse: 5.0497
+2022-11-18 22:27:11,862 - INFO - Horizon 15mins: mae: 0.4477, mape: 0.0639, rmse: 1.0250
+2022-11-18 22:27:11,862 - INFO - Horizon 30mins: mae: 1.2237, mape: 0.2238, rmse: 2.9304
+2022-11-18 22:27:11,862 - INFO - Horizon 60mins: mae: 3.7020, mape: 0.4869, rmse: 9.8009
+2022-11-18 22:27:11,865 - INFO - Epoch [174/200] (11550) train_mae: 0.2441, test_mae: 2.2618, lr: 0.000001, 6.3s, 7.3s
+Num of epoch: 175
+2022-11-18 22:27:18,088 - INFO - epoch complete
+2022-11-18 22:27:18,088 - INFO - evaluating now!
+2022-11-18 22:27:19,089 - INFO - Epoch [175/200] (11616) train_mae: 0.2521, val_mae: 2.6114
+Num of epoch: 176
+2022-11-18 22:27:25,189 - INFO - epoch complete
+2022-11-18 22:27:25,189 - INFO - evaluating now!
+2022-11-18 22:27:26,195 - INFO - Epoch [176/200] (11682) train_mae: 0.2224, val_mae: 2.5866
+Num of epoch: 177
+2022-11-18 22:27:32,412 - INFO - epoch complete
+2022-11-18 22:27:32,412 - INFO - evaluating now!
+2022-11-18 22:27:33,418 - INFO - Epoch [177/200] (11748) train_mae: 0.2007, val_mae: 1.9252
+Num of epoch: 178
+2022-11-18 22:27:39,502 - INFO - epoch complete
+2022-11-18 22:27:39,502 - INFO - evaluating now!
+2022-11-18 22:27:40,549 - INFO - Epoch [178/200] (11814) train_mae: 0.2095, val_mae: 1.8480
+Num of epoch: 179
+2022-11-18 22:27:46,703 - INFO - epoch complete
+2022-11-18 22:27:46,703 - INFO - evaluating now!
+2022-11-18 22:27:47,729 - INFO - Epoch [179/200] (11880) train_mae: 0.2088, val_mae: 2.4234
+2022-11-18 22:27:49,754 - INFO - Test: mae: 2.4033, mape: 0.9203, rmse: 3.2042
+2022-11-18 22:27:49,755 - INFO - Horizon 15mins: mae: 0.4679, mape: 0.2433, rmse: 0.7389
+2022-11-18 22:27:49,755 - INFO - Horizon 30mins: mae: 1.4060, mape: 0.7422, rmse: 2.2461
+2022-11-18 22:27:49,755 - INFO - Horizon 60mins: mae: 3.7304, mape: 2.0708, rmse: 5.7324
+2022-11-18 22:27:49,757 - INFO - Epoch [179/200] (11880) train_mae: 0.2088, test_mae: 2.4033, lr: 0.000001, 6.2s, 7.2s
+Num of epoch: 180
+2022-11-18 22:27:55,923 - INFO - epoch complete
+2022-11-18 22:27:55,923 - INFO - evaluating now!
+2022-11-18 22:27:56,938 - INFO - Epoch [180/200] (11946) train_mae: 0.2088, val_mae: 2.9864
+Num of epoch: 181
+2022-11-18 22:28:03,180 - INFO - epoch complete
+2022-11-18 22:28:03,180 - INFO - evaluating now!
+2022-11-18 22:28:04,240 - INFO - Epoch [181/200] (12012) train_mae: 0.2485, val_mae: 4.1706
+Num of epoch: 182
+2022-11-18 22:28:10,408 - INFO - epoch complete
+2022-11-18 22:28:10,408 - INFO - evaluating now!
+2022-11-18 22:28:11,427 - INFO - Epoch [182/200] (12078) train_mae: 0.2314, val_mae: 2.6609
+Num of epoch: 183
+2022-11-18 22:28:17,676 - INFO - epoch complete
+2022-11-18 22:28:17,676 - INFO - evaluating now!
+2022-11-18 22:28:18,670 - INFO - Epoch [183/200] (12144) train_mae: 0.2845, val_mae: 1.6507
+Num of epoch: 184
+2022-11-18 22:28:24,777 - INFO - epoch complete
+2022-11-18 22:28:24,777 - INFO - evaluating now!
+2022-11-18 22:28:25,778 - INFO - Epoch [184/200] (12210) train_mae: 0.2521, val_mae: 3.6030
+2022-11-18 22:28:27,741 - INFO - Test: mae: 3.4747, mape: 1.0892, rmse: 6.2575
+2022-11-18 22:28:27,742 - INFO - Horizon 15mins: mae: 0.7348, mape: 0.3677, rmse: 1.1709
+2022-11-18 22:28:27,742 - INFO - Horizon 30mins: mae: 2.0822, mape: 0.9297, rmse: 3.6728
+2022-11-18 22:28:27,742 - INFO - Horizon 60mins: mae: 5.9853, mape: 2.3190, rmse: 12.1671
+2022-11-18 22:28:27,745 - INFO - Epoch [184/200] (12210) train_mae: 0.2521, test_mae: 3.4747, lr: 0.000001, 6.1s, 7.1s
+Num of epoch: 185
+2022-11-18 22:28:33,969 - INFO - epoch complete
+2022-11-18 22:28:33,969 - INFO - evaluating now!
+2022-11-18 22:28:34,994 - INFO - Epoch [185/200] (12276) train_mae: 0.2515, val_mae: 1.9597
+Num of epoch: 186
+2022-11-18 22:28:41,228 - INFO - epoch complete
+2022-11-18 22:28:41,229 - INFO - evaluating now!
+2022-11-18 22:28:42,286 - INFO - Epoch [186/200] (12342) train_mae: 0.2510, val_mae: 3.6906
+Num of epoch: 187
+2022-11-18 22:28:48,416 - INFO - epoch complete
+2022-11-18 22:28:48,417 - INFO - evaluating now!
+2022-11-18 22:28:49,417 - INFO - Epoch [187/200] (12408) train_mae: 0.2445, val_mae: 3.2206
+Num of epoch: 188
+2022-11-18 22:28:55,589 - INFO - epoch complete
+2022-11-18 22:28:55,589 - INFO - evaluating now!
+2022-11-18 22:28:56,615 - INFO - Epoch [188/200] (12474) train_mae: 0.2555, val_mae: 1.6382
+Num of epoch: 189
+2022-11-18 22:29:02,854 - INFO - epoch complete
+2022-11-18 22:29:02,855 - INFO - evaluating now!
+2022-11-18 22:29:03,892 - INFO - Epoch [189/200] (12540) train_mae: 0.2633, val_mae: 1.7778
+2022-11-18 22:29:05,775 - INFO - Test: mae: 1.8074, mape: 0.3804, rmse: 3.0555
+2022-11-18 22:29:05,775 - INFO - Horizon 15mins: mae: 0.4714, mape: 0.1649, rmse: 1.2264
+2022-11-18 22:29:05,775 - INFO - Horizon 30mins: mae: 0.8563, mape: 0.2942, rmse: 2.1764
+2022-11-18 22:29:05,775 - INFO - Horizon 60mins: mae: 2.3400, mape: 0.7989, rmse: 5.4156
+2022-11-18 22:29:05,777 - INFO - Epoch [189/200] (12540) train_mae: 0.2633, test_mae: 1.8074, lr: 0.000001, 6.2s, 7.3s
+Num of epoch: 190
+2022-11-18 22:29:11,964 - INFO - epoch complete
+2022-11-18 22:29:11,964 - INFO - evaluating now!
+2022-11-18 22:29:12,980 - INFO - Epoch [190/200] (12606) train_mae: 0.2616, val_mae: 3.2649
+Num of epoch: 191
+2022-11-18 22:29:19,161 - INFO - epoch complete
+2022-11-18 22:29:19,161 - INFO - evaluating now!
+2022-11-18 22:29:20,207 - INFO - Epoch [191/200] (12672) train_mae: 0.3263, val_mae: 1.6356
+Num of epoch: 192
+2022-11-18 22:29:26,381 - INFO - epoch complete
+2022-11-18 22:29:26,381 - INFO - evaluating now!
+2022-11-18 22:29:27,460 - INFO - Epoch [192/200] (12738) train_mae: 0.2863, val_mae: 1.9990
+Num of epoch: 193
+2022-11-18 22:29:33,930 - INFO - epoch complete
+2022-11-18 22:29:33,930 - INFO - evaluating now!
+2022-11-18 22:29:34,930 - INFO - Epoch [193/200] (12804) train_mae: 0.3578, val_mae: 2.2600
+Num of epoch: 194
+2022-11-18 22:29:41,092 - INFO - epoch complete
+2022-11-18 22:29:41,092 - INFO - evaluating now!
+2022-11-18 22:29:42,102 - INFO - Epoch [194/200] (12870) train_mae: 0.2706, val_mae: 2.8666
+2022-11-18 22:29:44,018 - INFO - Test: mae: 2.8282, mape: 1.3294, rmse: 2.8859
+2022-11-18 22:29:44,018 - INFO - Horizon 15mins: mae: 1.0130, mape: 0.6537, rmse: 1.1476
+2022-11-18 22:29:44,018 - INFO - Horizon 30mins: mae: 1.9449, mape: 1.2299, rmse: 2.2642
+2022-11-18 22:29:44,018 - INFO - Horizon 60mins: mae: 3.9366, mape: 2.4067, rmse: 4.8209
+2022-11-18 22:29:44,021 - INFO - Epoch [194/200] (12870) train_mae: 0.2706, test_mae: 2.8282, lr: 0.000001, 6.2s, 7.2s
+Num of epoch: 195
+2022-11-18 22:29:50,182 - INFO - epoch complete
+2022-11-18 22:29:50,182 - INFO - evaluating now!
+2022-11-18 22:29:51,187 - INFO - Epoch [195/200] (12936) train_mae: 0.3111, val_mae: 2.3153
+Num of epoch: 196
+2022-11-18 22:29:57,301 - INFO - epoch complete
+2022-11-18 22:29:57,301 - INFO - evaluating now!
+2022-11-18 22:29:58,307 - INFO - Epoch [196/200] (13002) train_mae: 0.3208, val_mae: 3.4133
+Num of epoch: 197
+2022-11-18 22:30:04,520 - INFO - epoch complete
+2022-11-18 22:30:04,521 - INFO - evaluating now!
+2022-11-18 22:30:05,504 - INFO - Epoch [197/200] (13068) train_mae: 0.3351, val_mae: 2.7476
+Num of epoch: 198
+2022-11-18 22:30:11,818 - INFO - epoch complete
+2022-11-18 22:30:11,818 - INFO - evaluating now!
+2022-11-18 22:30:12,828 - INFO - Epoch [198/200] (13134) train_mae: 0.2975, val_mae: 3.5627
+Num of epoch: 199
+2022-11-18 22:30:21,669 - INFO - epoch complete
+2022-11-18 22:30:21,669 - INFO - evaluating now!
+2022-11-18 22:30:22,699 - INFO - Epoch [199/200] (13200) train_mae: 0.2875, val_mae: 1.8430
+2022-11-18 22:30:24,615 - INFO - Test: mae: 1.7726, mape: 0.3505, rmse: 2.2537
+2022-11-18 22:30:24,615 - INFO - Horizon 15mins: mae: 0.3395, mape: 0.1218, rmse: 0.5285
+2022-11-18 22:30:24,615 - INFO - Horizon 30mins: mae: 0.7848, mape: 0.2626, rmse: 1.3675
+2022-11-18 22:30:24,615 - INFO - Horizon 60mins: mae: 2.4198, mape: 0.7780, rmse: 4.3072
+2022-11-18 22:30:24,617 - INFO - Epoch [199/200] (13200) train_mae: 0.2875, test_mae: 1.7726, lr: 0.000001, 8.8s, 9.9s
+/root/miniconda3/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:129: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`. Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+warnings.warn("Detected call of `lr_scheduler.step()` before `optimizer.step()`. "
+/root/miniconda3/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:416: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+warnings.warn("To get the last learning rate computed by the scheduler, "
+main process return code: 0
