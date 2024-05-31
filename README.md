@@ -1,6 +1,16 @@
-# FRF for graph time-series forecasting
+# Functional Relation Field: A Model-Agnostic Framework for Multi-variate Time Series Forecasting
 ## Inrtoduction
-FRF is a model-agnostic framework to enhance the multivariate time series forecasting with a new inductive bias. Specifically, we first train a neural network with a selected target node as its output and all the other nodes as dependent variables (i.e. the input of this neural network), and identify the most relevant dependent nodes based on this trained network. We then re-train it to learn the relationship among the target and the discovered relevant nodes. Next, we incorporate these functional constraints into the network backbones by imposing them to the predicted output during both training and test process.
+Functional Relation Field (FRF) is a model-agnostic framework to enhance the multivariate time series forecasting with a new inductive bias. Specifically, we first train a neural network with a selected target node as its output and all the other nodes as dependent variables (i.e. the input of this neural network), and identify the most relevant dependent nodes based on this trained network. We then re-train it to learn the relationship among the target and the discovered relevant nodes. Next, we incorporate these functional constraints into the network backbones by imposing them to the predicted output during both training and test process.
+
+This work has been published in Artificial Intelligence 2024, please cite: 
+
+@article{li2024functional,
+  abbr={AI Journal},
+  title={Functional Relation Field: A Model-Agnostic Framework for Multivariate Time Series Forecasting},
+  author={Li, Ting and Yu, Bing and Li, Jianguo and Zhu, Zhanxing},
+  journal={Artificial Intelligence},
+  year={2024}
+}
 
 The complete code including three kinds of backbones (SCINet, Autoformer and FEDformer) will be released later.
   
